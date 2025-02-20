@@ -34,7 +34,7 @@ programa {
         } senao se (opcao == 1) {
            somar()
         } senao se (opcao == 2) {
-          // subtrair()
+           subtrair()
         } senao {
           escreva("\nopção inválida")
           esperarTeclarEnter() 
@@ -58,6 +58,13 @@ programa {
   funcao somar() {
     lerValores()
     resultado = v1 + v2
+    exibirResultado()
+    esperarTeclarEnter()
+  }
+
+  funcao subtrair() {
+    lerValores()
+    resultado = v1 - v2
     exibirResultado()
     esperarTeclarEnter()
   }
