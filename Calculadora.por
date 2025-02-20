@@ -53,19 +53,28 @@ programa {
 
   funcao exibirResultado() {
     escreva("  Resultado: ", resultado, "\n")
+    esperarTeclarEnter()
+  }
+
+  funcao calcular(cadeia operacao) {
+    se (operacao == "+")
+      resultado = v1 + v2
+    senao se (operacao == "-")
+      resultado = v1 - v2
+    senao se (operacao == "*")
+      resultado = v1 * v2
+    senao se (operacao == "/")
+      resultado = v1 / v2
+    exibirResultado()
   }
 
   funcao somar() {
     lerValores()
-    resultado = v1 + v2
-    exibirResultado()
-    esperarTeclarEnter()
+    calcular("+")
   }
 
   funcao subtrair() {
     lerValores()
-    resultado = v1 - v2
-    exibirResultado()
-    esperarTeclarEnter()
+    calcular("-")
   }
 }
